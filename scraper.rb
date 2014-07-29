@@ -5,12 +5,12 @@ require 'watir-webdriver'
 #require 'open_uri_redirections'
 #require 'messie'
 
-@profile=Selenium::WebDriver::Firefox::Profile.from_name "default"
-@profile.assume_untrusted_certificate_issuer=false
-@profile.secure_ssl = true
-@browser = Watir::Browser.new :firefox, :profile => @profile
+# @profile=Selenium::WebDriver::Firefox::Profile.from_name "default"
+# @profile.assume_untrusted_certificate_issuer=false
+# @profile.secure_ssl = true
+@browser = Watir::Browser.new :firefox
 
-base_url = "http://sdet.us"
+base_url = "http://thekingdomofgodisin.me"
 puts 'Crawling site'
 Anemone.crawl(base_url) do |a|
   URLS = []
