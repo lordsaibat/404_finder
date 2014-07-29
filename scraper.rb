@@ -10,7 +10,7 @@ require 'watir-webdriver'
 # @profile.secure_ssl = true
 @browser = Watir::Browser.new :firefox
 
-base_url = "http://yoursite"
+base_url = "http://integration.1800number.net"
 puts 'Crawling site'
 Anemone.crawl(base_url) do |a|
   URLS = []
@@ -22,7 +22,7 @@ Anemone.crawl(base_url) do |a|
         if @browser.text.include? "404"
             p u + " FAILED: page is broken"
         else
-          p u
+          p "This page is good: " + u
          end
       end
       # p URLS
