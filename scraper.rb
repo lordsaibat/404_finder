@@ -10,7 +10,7 @@ require 'watir-webdriver'
 # @profile.secure_ssl = true
 @browser = Watir::Browser.new :firefox
 
-base_url = "http://integration.1800number.net"
+base_url = "http://yoursite"
 puts 'Crawling site'
 Anemone.crawl(base_url) do |a|
   URLS = []
